@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+/* variables */
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft_Magenta: hsl(300, 69%, 71%);
+  --white: #fff;
+
+  --ff_Open_Sans: "Open Sans", sans-serif;
+  --ff_Poppins: "Poppins", sans-serif;
+  --fw_400: 400;
+  --fw_600: 600;
+
+  --25px: 1.5625rem;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+.card_btn,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+/* general */
+body {
+  min-height: 100vh;
+  background-color: var(--Violet);
+  background-image: url(/images/bg-desktop.svg);
+  background-size: 1318px 800px;
+  font-family: var(--ff_Open_Sans);
+  color: var(--white);
+  padding: 3.4375rem 4.8125rem 0 4.8125rem;
+}
+
+/* header */
+
+.logo {
+  width: 12rem;
+  padding-bottom: 3.125rem;
+}
+
+/* main layout */
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: var(--25px);
+}
+
+/* Hero section */
+
+.main_image {
+  margin: auto;
+}
+.content {
+  padding: 3.4375rem 0 0 3.4375rem;
+}
+.main_header {
+  font-family: var(--ff_Poppins);
+  font-weight: var(--fw_600);
+  max-width: 32.1875rem;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  padding-bottom: 2.8125rem;
+}
+
+.main_content {
+  max-width: 32.1875rem;
+  padding-bottom: 2.8125rem;
+  line-height: 1.6875rem;
+  font-size: 1.125rem;
+}
+
+/* Register button */
+
+.register_link {
+  padding: 1rem 4.375rem;
+  background-color: var(--white);
+  color: var(--Violet);
+  font-family: var(--ff_Poppins);
+  border-radius: var(--25px);
+}
+
+.register_link:hover {
+  background-color: var(--Soft_Magenta);
+  color: #fff;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer p {
+  width: fit-content;
+}
+
+/* Social Media links */
+
+.socials svg {
+  margin-left: 0.3125rem;
+  color: var(--white);
+}
+
+.socials svg:hover {
+  color: var(--Soft_Magenta);
+  fill: var(--Soft_Magenta);
+}
+
+/* Credits */
+
+.attribution {
+  font-size: 0.75rem;
+}
+.attribution a {
+  color: var(--Soft_Magenta);
+}
+.attribution a:hover {
+  color: var(--white);
+}
+
+/* Media queries */
+
+@media (max-width: 1000px) {
+  /* body {
+    padding: var(--25px) 33.5px 0 33.5px;
+  } */
+  .logo {
+    padding-bottom: var(--25px);
+  }
+  .content {
+    padding: var(--25px) 0 0 var(--25px);
+  }
+  .main_header {
+    font-size: 2.1875rem;
+    padding-bottom: var(--25px);
+  }
+
+  .main_content {
+    padding-bottom: var(--25px);
+    font-size: 0.9375rem;
+  }
+}
+@media (max-width: 800px) {
+  body {
+    background-image: url(/images/bg-mobile.svg);
+    background-size: 800px 780px;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    padding-bottom: var(--25px);
+  }
+  body {
+    padding: 0.625rem 0.9375rem 0 0.9375rem;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  .main_image {
+    max-width: 25rem;
+    margin: 0 auto;
+    padding-bottom: var(--25px);
+  }
+  .main_content {
+    padding-bottom: var(--25px);
+  }
+
+  footer {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 450px) {
+  body {
+    background-size: 375px 375px;
+    background-repeat: no-repeat;
+  }
+  .logo {
+    width: 7.8125rem;
+    padding-bottom: 4.0625rem;
+  }
+
+  main {
+    padding-bottom: 4.0625rem;
+  }
+  .main_image {
+    max-width: 18.75rem;
+  }
+
+  .main_header {
+    max-width: 18.75rem;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    text-align: center;
+  }
+
+  .main_content {
+    font-size: 1rem;
+    max-width: 18.75rem;
+  }
+  .register_link {
+    padding: 0.625rem 4.375rem;
+  }
+
+  .socials svg {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
