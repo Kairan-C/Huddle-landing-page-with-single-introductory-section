@@ -83,7 +83,7 @@ select {
 body {
   min-height: 100vh;
   background-color: var(--Violet);
-  background-image: url(/images/bg-desktop.svg);
+  background-image: url(images/bg-desktop.svg);
   background-size: 1318px 800px;
   font-family: var(--ff_Open_Sans);
   color: var(--white);
@@ -203,7 +203,7 @@ footer p {
 }
 @media (max-width: 800px) {
   body {
-    background-image: url(/images/bg-mobile.svg);
+    background-image: url(images/bg-mobile.svg);
     background-size: 800px 780px;
   }
   main {
