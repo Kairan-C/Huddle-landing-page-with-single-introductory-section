@@ -28,8 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://khyaran.github.io/Huddle-landing-page-with-single-introductory-section/](https://khyaran.github.io/Huddle-landing-page-with-single-introductory-section/)
 
 ## My process
 Just html and css practice. took a long time because I was trying to make it as close to the design as possible
